@@ -5,7 +5,8 @@ public class Price {
     public static void main(String[] args) {
       /** Chama a Classe Scanner */
         Scanner price = new Scanner(System.in);
-      /** Captura os Dados de Entrada */
+      
+        /** Captura os Dados de Entrada */
         System.out.println();
         System.out.println("**************** CALCULADORA DE PRESTAÇÕES ****************");
         System.out.println();
@@ -15,11 +16,13 @@ public class Price {
         float txJuros = price.nextFloat();
         System.out.print("Digite a Quantidade de Prestações: ");
         int numeroPrestacoes = price.nextInt();
+        
         /** Faz o Calculo */
         double taxaJurosPorcentagem = txJuros / 100;
         double taxaJurosCorrigida = taxaJurosPorcentagem + 1;
         double valorPrestacoes = (double) ((Math.pow(taxaJurosCorrigida, numeroPrestacoes)) * taxaJurosPorcentagem) / ((Math.pow(taxaJurosCorrigida, numeroPrestacoes)) - 1) * valorFinanciado;
         double valorTotal = valorPrestacoes * numeroPrestacoes;
+        
         /** Printa na Tela */
         System.out.println();
         System.out.println("**************** RESULTADO ****************");
